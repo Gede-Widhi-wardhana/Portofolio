@@ -24,7 +24,7 @@ function App() {
             </a>
           </div>
         </div>
-        <img src={DataImage.HeroImage} alt="Gede Widhi Wardhana" className="w-[500px] opacity-90rounded-4xl md:ml-auto animate__animated animate__fadeInUp animate__delay-3s" />
+        <img src={DataImage.HeroImage} alt="Gede Widhi Wardhana" className="w-[500px] opacity-90 rounded-4xl md:ml-auto animate__animated animate__fadeInUp animate__delay-3s" />
       </div>
 
       {/* tentang section */}
@@ -42,13 +42,13 @@ function App() {
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">
-                  3+<span className="text-blue-500">+</span>
+                  3<span className="text-blue-500">+</span>
                 </h1>
                 <p>Project Selesai</p>
               </div>
               <div>
                 <h1 className="text-4xl mb-1">
-                  2+<span className="text-blue-500">+</span>
+                  2<span className="text-blue-500">+</span>
                 </h1>
                 <p>Tahun Pengalaman</p>
               </div>
