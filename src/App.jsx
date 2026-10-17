@@ -1,6 +1,6 @@
 import "./index.css";
 import DataImage from "./data";
-import { listTools } from "./data";
+import { listTools, listProyek } from "./data";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <div className="Hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div>
           <div className="flex items-center gap-3 mb-6 bg-indigo-400 text-black w-fit p-4 rounded-2xl">
-            <img src={DataImage.HeroImage} alt="Gede Widhi Wardhana" className="w-10 rounded-md" />
+            <img src={DataImage.HeroImage} alt="Gede Widhi Wardhana" className="w-10 rounded-md" loading="lazy" />
             <q>Ngoding itu seru, kalau ada yang semangatin.</q>
           </div>
           <h1 className="text-5xl/tight font-bold mb-6">Hai, saya Gede Widhi Wardhana</h1>
@@ -31,14 +31,14 @@ function App() {
 
       <div className="tentang mt-32 py-10">
         <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-indigo-300 rounded-lg">
-          <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" />
+          <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy" />
           <p style={{ textAlign: "justify" }} className="text-base/loose mb-10">
             Saya mahasiswa semester 5 Program Studi Informatika, FMIPA Universitas Udayana. Saya tertarik pada pengembangan web, pengelolaan basis data, dan analisis data. Saya pernah mengembangkan sistem informasi dengan PHP dan Laravel,
             merancang basis data MySQL lengkap dengan pengaturan hak akses pengguna, membuat sistem monitoring parkir berbasis IoT dengan ESP32, serta menerapkan algoritma pohon keputusan ID3 dengan Python. Saya terbiasa bekerja dalam tim,
             cepat beradaptasi, dan memanfaatkan AI sebagai alat bantu dalam pemrograman. Saat ini saya terus mengasah kemampuan di bidang web dan data, dan terbuka untuk kesempatan magang (PKL) maupun kolaborasi proyek.
           </p>
           <div className="flex items-center justify-between">
-            <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" />
+            <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy" />
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">
@@ -61,7 +61,7 @@ function App() {
           <div className="tools-box grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             {listTools.map((tool) => (
               <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-md hover:bg-zinc-800 group" key={tool.id}>
-                <img src={tool.gambar} alt="Tools" className="w-14 bg-zinc-500 p-1 group-hover:bg-zinc-700" />
+                <img src={tool.gambar} alt="Tools" className="w-14 bg-zinc-500 p-1 group-hover:bg-zinc-700" loading="lazy"/>
                 <div>
                   <h4 className="font-bold">{tool.nama}</h4>
                   <p className="opacity-50">{tool.ket}</p>
@@ -69,6 +69,34 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Project section */}
+
+      <div className="project mt-32 py-10">
+        <h1 className="text-center text-4xl font-bold mb-2">Project</h1>
+        <p className="text-base/loose text-center opacity-50">Berikut adalah project yang pernah saya buat:</p>
+        <div className="poject-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map((proyek) => (
+            <div key={proyek.id} className="p-4 rounded-md bg-sky-900" >
+              <img src={proyek.gambar} alt={proyek.nama} loading="lazy" />
+              <div>
+                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+                <p className="text-base/loose mb-4">{proyek.desk}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {proyek.tools.map((tool, index) => (
+                    <p className="py-1 px-3 border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>
+                      {tool}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-8 text-center">
+                  <a className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-500" href="#">Lihat Project</a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
