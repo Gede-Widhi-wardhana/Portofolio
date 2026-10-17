@@ -1,5 +1,6 @@
 import "./index.css";
 import DataImage from "./data";
+import { listTools } from "./data";
 
 function App() {
   return (
@@ -11,12 +12,10 @@ function App() {
             <q>Ngoding itu seru, kalau ada yang semangatin.</q>
           </div>
           <h1 className="text-5xl/tight font-bold mb-6">Hai, saya Gede Widhi Wardhana</h1>
-          <p className="text-base/loose mb-6 opacity-70">
-            Saya mahasiswa semester 5 Program Studi Informatika Universitas Udayana yang memiliki minat pada pengembangan web, pengelolaan basis data, dan analisis data. Saya memiliki pengalaman dalam mengembangkan sistem informasi
-            menggunakan PHP dan Laravel, serta memanfaatkan AI sebagai alat bantu dalam proses pemrograman. Saya mampu beradaptasi, bekerja sama dalam tim, dan memiliki semangat untuk terus belajar serta mengembangkan keterampilan di bidang
-            teknologi informasi.
+          <p className="text-base/loose mb-6 opacity-70 " style={{ textAlign: "justify" }}>
+            Saya mahasiswa Informatika Universitas Udayana yang tertarik untuk belajar membangun website, mengolah basis data, dan menganalisis data untuk mengasah skill dan mempelajarinya lebih dalam.
           </p>
-          <div className="flex items-center sm:gap-4 gap-2"> 
+          <div className="flex items-center sm:gap-4 gap-2">
             <a href="#" className="bg-indigo-600 p-4 rounded-2xl hover:bg-indigo-500">
               Download CV <i class="ri-download-line ri-lg"></i>
             </a>
@@ -26,6 +25,51 @@ function App() {
           </div>
         </div>
         <img src={DataImage.HeroImage} alt="Gede Widhi Wardhana" className="w-[500px] opacity-90rounded-4xl md:ml-auto" />
+      </div>
+
+      {/* tentang section */}
+
+      <div className="tentang mt-32 py-10">
+        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-indigo-300 rounded-lg">
+          <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" />
+          <p style={{ textAlign: "justify" }} className="text-base/loose mb-10">
+            Saya mahasiswa semester 5 Program Studi Informatika, FMIPA Universitas Udayana. Saya tertarik pada pengembangan web, pengelolaan basis data, dan analisis data. Saya pernah mengembangkan sistem informasi dengan PHP dan Laravel,
+            merancang basis data MySQL lengkap dengan pengaturan hak akses pengguna, membuat sistem monitoring parkir berbasis IoT dengan ESP32, serta menerapkan algoritma pohon keputusan ID3 dengan Python. Saya terbiasa bekerja dalam tim,
+            cepat beradaptasi, dan memanfaatkan AI sebagai alat bantu dalam pemrograman. Saat ini saya terus mengasah kemampuan di bidang web dan data, dan terbuka untuk kesempatan magang (PKL) maupun kolaborasi proyek.
+          </p>
+          <div className="flex items-center justify-between">
+            <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" />
+            <div className="flex items-center gap-6">
+              <div>
+                <h1 className="text-4xl mb-1">
+                  45<span className="text-blue-500">+</span>
+                </h1>
+                <p>Project Selesai</p>
+              </div>
+              <div>
+                <h1 className="text-4xl mb-1">
+                  4<span className="text-blue-500">+</span>
+                </h1>
+                <p>Tahun Pengalaman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="tools mt-32">
+          <h1 className="text-4xl/snug font-bold mb-4">Tools yang digunakan</h1>
+          <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50">Berikut ini adalah tools yang sering saya gunakan:</p>
+          <div className="tools-box grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+            {listTools.map((tool) => (
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-md hover:bg-zinc-800 group" key={tool.id}>
+                <img src={tool.gambar} alt="Tools" className="w-14 bg-zinc-500 p-1 group-hover:bg-zinc-700" />
+                <div>
+                  <h4 className="font-bold">{tool.nama}</h4>
+                  <p className="opacity-50">{tool.ket}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
