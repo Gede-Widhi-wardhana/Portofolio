@@ -92,7 +92,7 @@ export const listProyek = [
     gambar: Proyek1,
     nama: "Kursus Hobi",
     desk: "Platform kursus hobi online dan offline, dari cari kursus, daftar, bayar, sampai dapat sertifikat.",
-    tools: ["Laravel, Tailwind CSS, Alpine.js, dan MySQL"],
+    tools: ["Laravel", "Tailwind CSS", "Alpine.js", "MySQL"],
     dad: "200",
   },
   {
@@ -100,7 +100,7 @@ export const listProyek = [
     gambar: Proyek2,
     nama: "SIERRA",
     desk: "Sistem pengajuan dan pengelolaan surat akademik Informatika secara digital, dari pengajuan sampai unduh surat.",
-    tools: ["Laravel, Tailwind CSS, dan MySQL"],
+    tools: ["Laravel", "Tailwind CSS", "MySQL"],
     dad: "300",
   },
   {
