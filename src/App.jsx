@@ -16,7 +16,7 @@ function App() {
             Saya mahasiswa Informatika Universitas Udayana yang tertarik untuk belajar membangun website, mengolah basis data, dan menganalisis data untuk mengasah skill dan mempelajarinya lebih dalam.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
-            <a href="#" className="bg-indigo-600 p-4 rounded-2xl hover:bg-indigo-500">
+            <a href="https://drive.google.com/file/d/1kh0l1rBcizcEWETtG7dbvsBIvXGAftHp/view?usp=sharing" className="bg-indigo-600 p-4 rounded-2xl hover:bg-indigo-500">
               Download CV <i className="ri-download-line ri-lg"></i>
             </a>
             <a href="#proyek" className="bg-indigo-600 p-4 rounded-2xl hover:bg-indigo-500">
@@ -98,11 +98,6 @@ function App() {
                       {tool}
                     </p>
                   ))}
-                </div>
-                <div className="mt-8 text-center">
-                  <a className="bg-blue-800 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-700" href="#">
-                    Lihat Project
-                  </a>
                 </div>
               </div>
             </div>

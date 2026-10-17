@@ -25,7 +25,7 @@ const Navbar = () => {
       >
         <li>
           <a href="#beranda" className="sm:text-lg text-base font-medium">
-            beranda
+            Beranda
           </a>
         </li>
         <li>
