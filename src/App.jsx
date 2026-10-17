@@ -92,12 +92,40 @@ function App() {
                   ))}
                 </div>
                 <div className="mt-8 text-center">
-                  <a className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-500" href="#">Lihat Project</a>
+                  <a className="bg-blue-800 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-700" href="#">Lihat Project</a>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Contact section */}
+
+      <div className="contact mt-32 p-10">
+        <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
+        <p className="text-base/loose text-center mb-10 opacity-50">Mari terhubung dengan saya</p>
+        <form action="https://formsubmit.co/wardhanagedewidhi@gmail.com" method="POST" className="bg-sky-900 p-10 w-fit mx-auto rounded-md" autoComplete="off">
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <label className="font-semibold">Nama lengkap</label>
+              <input type="text" name="nama" placeholder="Masukkan nama lengkap..." className="border border-zinc-600 p-2 rounded-md" required />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label className="font-semibold">Email</label>
+              <input type="email" name="email" placeholder="Masukkan email..." className="border border-zinc-600 p-2 rounded-md" required />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="pesan" className="font-semibold">Pesan</label>
+              <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Masukkan pesan..." className="border border-zinc-600 p-2 rounded-md" required>
+
+              </textarea>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="bg-blue-800 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-blue-700">Kirim Pesan</button>
+            </div>
+          </div>
+        </form> 
       </div>
     </>
   );
