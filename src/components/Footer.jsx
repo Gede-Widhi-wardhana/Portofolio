@@ -7,17 +7,17 @@ const Footer = () => {
         <a href="#tentang">Tentang</a>
         <a href="#proyek">Project</a>
       </div>
-      <div className="flex items-center gap-3">
-        <a href="https://github.com/Gede-Widhi-wardhana">
+      <div className="flex items-center gap-3 text-2xl">
+        <a className="hover:text-blue-500 hover:bg-white rounded-full transition duration-300"  href="https://github.com/Gede-Widhi-wardhana">
           <i className="ri-github-fill ri-2"></i>
         </a>
-        <a href="https://www.instagram.com/widdana_/?__pwa=1">
+        <a className="hover:text-blue-500 hover:bg-white rounded-full transition duration-300"  href="https://www.instagram.com/widdana_/?__pwa=1">
           <i className="ri-instagram-fill ri-2"></i>
         </a>
-        <a href="https://www.linkedin.com/in/widhi-wardhana-gede/">
+        <a className="hover:text-blue-500 hover:bg-white rounded-full transition duration-300"  href="https://www.linkedin.com/in/widhi-wardhana-gede/">
           <i className="ri-linkedin-fill ri-2"></i>
         </a>
-        <a href="https://wa.me/6285943111974">
+        <a className="hover:text-blue-500 hover:bg-white rounded-full transition duration-300"  href="https://wa.me/6285943111974">
           <i className="ri-whatsapp-fill ri-2"></i>
         </a>
       </div>

@@ -13,8 +13,12 @@ import Tools4 from "/assets/tools/bootstrap.png";
 import Tools5 from "/assets/tools/js.png";
 import Tools6 from "/assets/tools/nodejs.png";
 import Tools7 from "/assets/tools/github.png";
-import Tools8 from "/assets/tools/canva.png";
-import Tools9 from "/assets/tools/figma.png";
+import Tools8 from "/assets/tools/figma.png";
+import Tools9 from "/assets/tools/Laravel.png";
+import Tools10 from "/assets/tools/python.png";
+import Tools11 from "/assets/tools/vite.png";
+import Tools12 from "/assets/tools/php.png";
+import Tools13 from "/assets/tools/mysql.png";
 
 export const listTools = [
   {
@@ -69,16 +73,44 @@ export const listTools = [
   {
     id: 8,
     gambar: Tools8,
-    nama: "Canva",
+    nama: "Figma",
     ket: "Design App",
     dad: "1000",
   },
   {
     id: 9,
     gambar: Tools9,
-    nama: "Figma",
-    ket: "Design App",
+    nama: "Laravel",
+    ket: "Framework",
     dad: "1100",
+  },
+  {
+    id: 10,
+    gambar: Tools10,
+    nama: "Python",
+    ket: "Language",
+    dad: "1200",
+  },
+  {
+    id: 11,
+    gambar: Tools11,
+    nama: "Vite",
+    ket: "Build Tool",
+    dad: "1300",
+  },
+  {
+    id: 12,
+    gambar: Tools12,
+    nama: "PHP",
+    ket: "Language",
+    dad: "1400",
+  },
+  {
+    id: 13,
+    gambar: Tools13,
+    nama: "MySQL",
+    ket: "Database",
+    dad: "1500",
   },
 ];
 
@@ -92,8 +124,9 @@ export const listProyek = [
     gambar: Proyek1,
     nama: "Kursus Hobi",
     desk: "Platform kursus hobi online dan offline, dari cari kursus, daftar, bayar, sampai dapat sertifikat.",
-    tools: ["Laravel", "Tailwind CSS", "Alpine.js", "MySQL"],
+    tools: ["Laravel", "Tailwind CSS", "Alpine.js", "`MySQL"],
     dad: "200",
+    link: "https://github.com/Bayu75/Kursus-Hobi",
   },
   {
     id: 2,
@@ -102,6 +135,7 @@ export const listProyek = [
     desk: "Sistem pengajuan dan pengelolaan surat akademik Informatika secara digital, dari pengajuan sampai unduh surat.",
     tools: ["Laravel", "Tailwind CSS", "MySQL"],
     dad: "300",
+    link: "https://github.com/Bayu75/Sistem-Informasi-E-Surat-Informatika",
   },
   {
     id: 3,
@@ -110,5 +144,6 @@ export const listProyek = [
     desk: "Sebuah situs web portofolio pribadi yang menampilkan informasi tentang diri saya, pengalaman, dan proyek-proyek yang telah saya kerjakan.",
     tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
     dad: "400",
+    link: "https://github.com/Gede-Widhi-wardhana/Portofolio",
   },
 ];
